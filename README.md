@@ -21,7 +21,7 @@ $ docker exec -it postgres-instance psql -U postgres -c "create database todoapp
 Run app backend
 
 ```sh
-$ mvn spring-boot:run
+$ cd backend && mvn spring-boot:run
 ```
 
 ### Run application
