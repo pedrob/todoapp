@@ -1,5 +1,5 @@
 # todoapp
-A simple web to make TODO. 
+A simple web app to make TODO. 
 
 ## Quick Start
 
