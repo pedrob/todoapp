@@ -10,25 +10,23 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
+@CrossOrigin(origins = "*")
 @RestController
 public class TaskController {
 
     @Autowired
     private TaskRepository taskRepository;
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/tasks")
     public Page<Task> getTasks(Pageable pageable) {
         return taskRepository.findAll(pageable);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/tasks")
     public Task createTask(@Valid @RequestBody Task task) {
         return taskRepository.save(task);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping("/tasks/{taskId}")
     public Task updateTask(@PathVariable Long taskId, @Valid @RequestBody Task taskRequest) {
         return taskRepository.findById(taskId).map(task -> {
@@ -38,7 +36,6 @@ public class TaskController {
         }).orElseThrow(() -> new ResourceNotFoundException("Task not found with id " + taskId));
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping("/tasks/{taskId}")
     public ResponseEntity<?> deleteTask(@PathVariable Long taskId) {
         return taskRepository.findById(taskId).map(task -> {

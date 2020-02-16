@@ -19,4 +19,8 @@ export const Container = styled.form`
 		margin-left: 10px;
 		cursor: pointer;
 	}
+
+	button:hover {
+		background-color: #59cc98;
+	}
 `;
