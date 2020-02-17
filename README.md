@@ -8,6 +8,9 @@ A simple web app to make TODO.
 - [__Java SE Development Kit__](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - [__Docker__](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - [__Maven__](http://maven.apache.org/download.cgi/)
+- [__Node__](https://nodejs.org/en/download/)
+- [__Yarn__](https://classic.yarnpkg.com/pt-BR/docs/install)
+
 
 ### Basics
 
